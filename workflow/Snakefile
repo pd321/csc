@@ -1,0 +1,14 @@
+import itertools
+import pandas as pd
+
+
+include: "rules/common.smk"
+include: "rules/chromHMM.smk"
+include: "rules/sciddo.smk"
+include: "rules/sciddo_chromosome_wise_for_chrom_dynamics.smk"
+include: "rules/sagaconf.smk"
+
+outfiles = get_output()
+
+rule all:
+	input: outfiles
