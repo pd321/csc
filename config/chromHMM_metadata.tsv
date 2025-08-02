@@ -1,8 +1,15 @@
-CelltypeA_rep1	Histone1	test_sample.bam	test_input.bam
-CelltypeA_rep2	Histone1	test_sample.bam	test_input.bam
-CelltypeA_rep1	Histone2	test_sample.bam	test_input.bam
-CelltypeA_rep2	Histone2	test_sample.bam	test_input.bam
-CelltypeB_rep1	Histone1	test_sample.bam	test_input.bam
-CelltypeB_rep2	Histone1	test_sample.bam	test_input.bam
-CelltypeB_rep1	Histone2	test_sample.bam	test_input.bam
-CelltypeB_rep2	Histone2	test_sample.bam	test_input.bam
+Effector	H3K27ac	Effector_H3K27ac.sorted.remdup.nonblklst.filt.resort.bam	Effector_TI.sorted.remdup.nonblklst.filt.resort.bam
+Effector	H3K27me3	Effector_H3K27me3.sorted.remdup.nonblklst.filt.resort.bam	Effector_TI.sorted.remdup.nonblklst.filt.resort.bam
+Effector	H3K4me1	Effector_H3K4me1.sorted.remdup.nonblklst.filt.resort.bam	Effector_TI.sorted.remdup.nonblklst.filt.resort.bam
+Effector	H3K4me3	Effector_H3K4me3.sorted.remdup.nonblklst.filt.resort.bam	Effector_TI.sorted.remdup.nonblklst.filt.resort.bam
+Effector	H3K4me2	Effector_H3K4me2.sorted.remdup.nonblklst.filt.resort.bam	Effector_TI.sorted.remdup.nonblklst.filt.resort.bam
+Memory	H3K27ac	Memory_H3K27ac.sorted.remdup.nonblklst.filt.resort.bam	Memory_TI.sorted.remdup.nonblklst.filt.resort.bam
+Memory	H3K27me3	Memory_H3K27me3.sorted.remdup.nonblklst.filt.resort.bam	Memory_TI.sorted.remdup.nonblklst.filt.resort.bam
+Memory	H3K4me1	Memory_H3K4me1.sorted.remdup.nonblklst.filt.resort.bam	Memory_TI.sorted.remdup.nonblklst.filt.resort.bam
+Memory	H3K4me3	Memory_H3K4me3.sorted.remdup.nonblklst.filt.resort.bam	Memory_TI.sorted.remdup.nonblklst.filt.resort.bam
+Memory	H3K4me2	Memory_H3K4me2.sorted.remdup.nonblklst.filt.resort.bam	Memory_TI.sorted.remdup.nonblklst.filt.resort.bam
+Naive	H3K27ac	Naive_H3K27ac.sorted.remdup.nonblklst.filt.resort.bam	
+Naive	H3K27me3	Naive_H3K27me3.sorted.remdup.nonblklst.filt.resort.bam	
+Naive	H3K4me1	Naive_H3K4me1.sorted.remdup.nonblklst.filt.resort.bam	
+Naive	H3K4me3	Naive_H3K4me3.sorted.remdup.nonblklst.filt.resort.bam	
+Naive	H3K4me2	Naive_H3K4me2.sorted.remdup.nonblklst.filt.resort.bam	

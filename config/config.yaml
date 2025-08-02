@@ -1,28 +1,29 @@
-threads: 16
+threads: 8
 # path to genome sizes file
 genome_sizes: 'data/external/ref/fa/genome.chrom.sizes'
 # genome for methods
 genome: 'mm10'
 
+run_mode: 'sciddo'
+
 chromHMM:
   chromosomes: ['chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chrX', 'chrY', 'chrM']
-  cell_types: 
-    post_pca_subset: ['Memory_rep1', 'Memory_rep2', 'MP_rep1', 'MP_rep2', 'Naive_rep1', 'Naive_rep2', 'TE_rep1', 'TE_rep2']
-    no_filtering: ['Memory_rep1', 'Memory_rep2', 'MP_rep1', 'MP_rep2', 'Naive_rep1', 'Naive_rep2', 'TE_rep1', 'TE_rep2']
-    merged_calls: ['Memory', 'MP', 'Naive', 'TE']
   num_of_states: [9, 10, 11]
+  bam_directory: 'data/raw'
+  java_max_memory: 32
+
 
 sciddo:
   do_sciddo_for_these_models: [9]
-  sample_types: ['naive', 'te', 'mp', 'memory']
-  subset_specfic_sample_types_left: ['te']
-  subset_specfic_sample_types_right: ['non_te']
-  rank_pct_cutoff: 0.25
+  sample_types: ['Effector', 'Memory', 'Naive']
   chromatin_dynamics:
     chromosomes_to_examine: ['chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19']
     non_enhancer: '2 3 1 8'
     enhancer: '7'
-    non_active_tss: '2 3 6'
-    active_tss: '5'
+    from_state: 'non_enhancer'
+    to_state: 'enhancer'
     req_in_how_many_replicates: 2
 
+sagaconf:
+  do_sagaconf_for_these_models: [9]
+  cell_types: [['CelltypeA_rep1', 'CelltypeA_rep2'], ['CelltypeB_rep1', 'CelltypeB_rep2']]
