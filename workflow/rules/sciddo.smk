@@ -17,7 +17,7 @@ rule convert_states_and_score:
         "--no-conf-dump "
         "--workers {threads} "
         "convert "
-        "--state-seg results/chromHMM/post_pca_subset/learn_model/{wildcards.sciddo_chromHMM_model}/ "
+        "--state-seg results/chromHMM/learn_model/{wildcards.sciddo_chromHMM_model}/ "
         "--chrom-sizes {input.chrom_sizes} "
         "--state-labels {input.state_labels} "
         "--state-colors {input.state_colours} "

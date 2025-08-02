@@ -2,4 +2,4 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
-  - chromhmm=1.25
+  - chromhmm=1.27

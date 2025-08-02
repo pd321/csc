@@ -7,7 +7,7 @@ import time
 
 report: "../report/workflow.rst"
 
-configfile: 'config/config_test.yaml'
+configfile: 'config/config.yaml'
 # validate(config, schema="schemas/config_schema.yaml")
 
 chromhmm_metadata_file = "config/chromHMM_metadata.tsv"
@@ -26,7 +26,7 @@ sciddo_sample_combinations = list(
 )
 
 run_modes = config['run_mode'].split(',') if config['run_mode'] else []
-print(run_modes)
+
 def get_output():
 	outfiles = expand("results/chromHMM/learn_model/{num_of_states}/model_{num_of_states}.txt", num_of_states = config['chromHMM']['num_of_states'])
 	if "sciddo" in run_modes:
@@ -40,7 +40,6 @@ def get_output():
 			for model, (sample1, sample2) in sciddo_sample_and_model_combinations
 		]
 	
-	print(outfiles)
 	if "sagaconf" in run_modes:
 		outfiles += expand("results/sagaCONF/run_results/{num_of_states}/{base_cell_type}-vs-{verif_cell_type}/confident_segments_dense.bed", num_of_states = config['sagaconf']['do_sagaconf_for_these_models'], base_cell_type = "CelltypeA_rep1", verif_cell_type = "CelltypeA_rep2")
 
